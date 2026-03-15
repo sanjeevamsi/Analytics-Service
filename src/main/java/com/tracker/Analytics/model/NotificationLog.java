@@ -1,5 +1,6 @@
 package com.tracker.Analytics.model;
 
+import com.tracker.Analytics.enums.NotificationEventType;
 import com.tracker.Analytics.enums.NotificationStatus;
 import jakarta.persistence.*;
 
@@ -15,7 +16,8 @@ public class NotificationLog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String userId;
-    private String eventType;
+    @Enumerated(EnumType.STRING)
+    private NotificationEventType eventType;
     @Enumerated(EnumType.STRING)
     private NotificationStatus status;
     @Column(columnDefinition = "TEXT")
