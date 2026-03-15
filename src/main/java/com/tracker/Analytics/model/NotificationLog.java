@@ -24,7 +24,7 @@ public class NotificationLog {
     private String messagePayload;
     private LocalDateTime createdAt;
 
-    public NotificationLog(String userId, String eventType, NotificationStatus status) {
+    public NotificationLog(String userId, NotificationEventType eventType, NotificationStatus status) {
         this.userId = userId;
         this.eventType = eventType;
         this.status = status;
